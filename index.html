@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl7/1L_dstPt3Wfn1J7TTW29TmQ/7F97RBn/c7F3p8" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/98e1cb7a78.js" crossorigin="anonymous"></script>
 
     <title>JavaScript Help Center</title>
     <style>
@@ -69,12 +70,82 @@
 .search-box {
     width: 80%;
     max-width: 500px;
-    padding: 12px 16px;
+    padding: 12px 40px 12px 16px; /* 修改这一行，增加右侧内边距 */
     font-size: 1rem;
     border: 2px solid #ffffff;
     border-radius: 4px;
     margin-top: 16px;
 }
+
+.search-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    text-align: center; /* 添加这一行 */
+}
+
+.search-icon {
+    position: absolute;
+    right: 65px;
+    top: 63%;
+    transform: translateY(-50%);
+    color: #a8b3ed;
+    font-size: 1.5rem; /* 增加这一行以调整图标大小 */
+    pointer-events: none;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.item {
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+.item img {
+  width: 25%;
+  height: auto;
+  border-radius: 4px;
+  
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  margin-top: 12px;
+}
+
+.item p {
+  font-size: 1rem;
+  margin-top: 8px;
+}
+
+footer {
+  background-color: #3f51b5;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+这个简单的示例创建了一个蓝色背景的 footer 横幅，其中包含一条版权声明。您可以根据需要自定义文本内容和样式。
+
+
+
+
+
+
+
 
     </style>
 </head>
@@ -86,9 +157,51 @@
         </div>
     </header>
     <div class="banner">
-        <h2>Feel Free to Ask Any Question about JavaScript</h2>
-        <input type="search" class="search-box" placeholder="Search...">
+        <h2>Feel Free to Ask Any Questions about JavaScript</h2>
+        <div class="search-container">
+            <input type="search" class="search-box" placeholder="Search...">
+            
+            <i class="fa-solid fa-heart search-icon"></i>
+        </div>
     </div>
+    <main>
+        <div class="content">
+          <div class="item">
+            <img src="https://theme.zdassets.com/theme_assets/2197739/aed6500f4da41c641f3de5d96247eb6654e9c386.png" alt="Image 1">
+            <h3>Variables and Data Types</h3>
+            <p>The fundamental building blocks in JavaScript, including data types such as strings, numbers, booleans, arrays, and objects, as well as how to declare and use variables.</p>
+          </div>
+          <div class="item">
+            <img src="https://theme.zdassets.com/theme_assets/2197739/91588b3d042df901d9b941ccbb57af4f151401c7.png" alt="Image 1">
+            <h3>Functions and Scope</h3>
+            <p>Functions are the basic units in JavaScript for encapsulating functionality and logic. Learn how to create and call functions, function scope, and closures.</p>
+          </div>
+          <div class="item">
+            <img src="https://theme.zdassets.com/theme_assets/2197739/50d0db451c0e1e66e1caddd142986fcf6792ca05.png" alt="Image 1">
+            <h3>Control Flow and Loops</h3>
+            <p>Learn how to use conditional statements (if-else, switch), loops (for, while), and exception handling (try-catch) to control the execution order of your code.</p>
+          </div>
+          <div class="item">
+            <img src="https://theme.zdassets.com/theme_assets/2197739/3e82d0126e97d7b7c60a611d4e11b3c278d33743.png" alt="Image 1">
+            <h3>DOM Manipulation</h3>
+            <p>The Document Object Model (DOM) allows you to manipulate web page content using JavaScript. Learn how to access and modify elements, attributes, and styles, as well as handle events.</p>
+          </div>
+          <div class="item">
+            <img src="https://theme.zdassets.com/theme_assets/2197739/7712592465ef5c7bf18f1c7cb16e19ab44eb81e3.png" alt="Image 1">
+            <h3>Asynchronous Programming</h3>
+            <p>Understand how to work with asynchronous operations in JavaScript using callbacks, Promises, and async/await, such as AJAX requests, setTimeout, and other delayed operations.</p>
+          </div>
+          <div class="item">
+            <img src="https://theme.zdassets.com/theme_assets/2197739/dcc25d18e224d12621d74e545cc8bdd1b5685ca8.png" alt="Image 1">
+            <h3>Advanced Topics</h3>
+            <p>Explore advanced concepts in JavaScript, such as prototype inheritance, modular programming, generators, and iterators, as well as learn about new ECMAScript features.</p>
+          </div>
+          <!-- ... 其他五个内容块 ... -->
+        </div>
+      </main>
+      <footer>
+        <p>© 2023 JavaScript Help Center. All rights reserved.</p>
+      </footer>
     <script>
         // 在这里添加 JavaScript 代码
     </script>
